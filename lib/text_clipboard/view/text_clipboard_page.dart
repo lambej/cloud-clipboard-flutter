@@ -14,7 +14,8 @@ class TextClipboardPage extends StatefulWidget {
   State<TextClipboardPage> createState() => _TextClipboardPageState();
 }
 
-class _TextClipboardPageState extends State<TextClipboardPage> {
+class _TextClipboardPageState extends State<TextClipboardPage>
+    with SingleTickerProviderStateMixin {
   @override
   void initState() {
     super.initState();

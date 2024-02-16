@@ -12,6 +12,14 @@ class TextClipboardPage extends StatefulWidget {
   const TextClipboardPage({super.key});
   @override
   State<TextClipboardPage> createState() => _TextClipboardPageState();
+  static Page<void> page() => MaterialPage<void>(
+        child: BlocProvider(
+          create: (context) => TextClipboardBloc(
+            clipboardRepository: context.read<ClipboardRepository>(),
+          )..add(TextClipboardRegister()),
+          child: const TextClipboardPage(),
+        ),
+      );
 }
 
 class _TextClipboardPageState extends State<TextClipboardPage>
@@ -86,7 +94,9 @@ class _TextClipboardPageState extends State<TextClipboardPage>
                   itemBuilder: (context, index) {
                     return Padding(
                       padding: const EdgeInsets.symmetric(
-                          vertical: 8, horizontal: 16),
+                        vertical: 8,
+                        horizontal: 16,
+                      ),
                       child: Container(
                         decoration: BoxDecoration(
                           border: Border.all(

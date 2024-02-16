@@ -30,7 +30,7 @@ class LocalClipboardRepository extends ClipboardRepository {
   }
 
   @override
-  Future<void> init() async {
+  Future<void> init(String userId) async {
     await _initClipboardTexts();
   }
 

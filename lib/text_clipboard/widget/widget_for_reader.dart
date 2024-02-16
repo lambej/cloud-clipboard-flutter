@@ -5,12 +5,12 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:typed_data';
 
-import 'package:flutter/material.dart';
 import 'package:collection/collection.dart';
+import 'package:flutter/material.dart';
 import 'package:super_clipboard/super_clipboard.dart';
 
 const formatCustom = CustomValueFormat<Uint8List>(
-  applicationId: "com.superlist.clipboard.Example.CustomType",
+  applicationId: 'com.superlist.clipboard.Example.CustomType',
 );
 
 void buildWidgetsForReaders(

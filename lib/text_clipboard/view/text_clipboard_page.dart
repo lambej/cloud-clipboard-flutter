@@ -6,7 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:super_clipboard/super_clipboard.dart';
 
 const _notAvailableMessage =
-    'Clipboard is not available on this platform. Use ClipboardEvents API instead.';
+    'There is no text available in the clipboard. Please add some text to the clipboard to see it here.';
 
 class TextClipboardPage extends StatefulWidget {
   const TextClipboardPage({super.key});
